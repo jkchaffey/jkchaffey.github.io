@@ -27,3 +27,12 @@ text-shadow: 2px 2px 2px #CCCCCC;
 nav a:link { color: #4B0082; }
 nav a:visited { color: #DDA0DD; }
 nav a:hover { color: #9932CC; }
+
+footer {
+	color: #003366;
+			font-size: .70em;
+			font-style: italic;
+			text-align: center;
+			text-color: #C0C0C0;
+			padding: 1em;
+}
