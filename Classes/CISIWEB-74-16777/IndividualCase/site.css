@@ -1,0 +1,29 @@
+main	{padding-left: 10em;
+		padding-right: 10em;
+		background-color: white;
+		border: 1px solid #4B0082;
+		margin-left: 200px;
+}
+
+
+
+nav       { font-weight: bold;
+			text-align: right;
+			padding: 5px;
+			
+			float: left;
+			width: 200px;
+			
+				}
+
+nav ul{
+		list-style-type: none;
+}
+
+nav a{text-decoration: none;
+text-shadow: 2px 2px 2px #CCCCCC;
+}
+
+nav a:link { color: #4B0082; }
+nav a:visited { color: #DDA0DD; }
+nav a:hover { color: #9932CC; }

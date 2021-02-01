@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<link href="site.css" rel="stylesheet"> 
+<div id="wrapper">
+
+
+<head>
+<title>Let's do some basic math calculations, with JavaScript</title>
+</head>
+
+<nav>
+<ul>
+		<li><a href="index.htm">Home</a></li>
+		<li><a href="PageHolder1.html">PageHolder1</a></li>
+		<li><a href="PageHolder2.html">PageHolder2</a></li>
+		<li><a href="PageHolder3.html">PageHolder3</a></li>
+		<li><a href="PageHolder4.html">PageHolder4</a></li>
+		<li><a href="SimpleMath.htm">SimpleMath</a></li>
+
+</ul>
+</nav>
+
+<body style="background-color:powderblue;">
+<script src="modernizr.custom.65897.js"></script>
+
+<script language='JavaScript' type='text/JavaScript'>
+<!--
+var NumCalcOne = 0;
+var NumCalcTwo = 0;
+
+
+function result(){
+NumCalcOne= parseFloat(document.getElementById('NumOneInput').value);
+NumCalcTwo= parseFloat(document.getElementById('NumTwoInput').value);
+
+var ValueAdd = NumCalcOne + NumCalcTwo ;
+
+document.getElementById('ValueAdd').innerHTML=ValueAdd;
+
+var ValueSub = NumCalcOne - NumCalcTwo ;
+document.getElementById('ValueSub').innerHTML=ValueSub;
+
+var ValueMul = NumCalcOne * NumCalcTwo ;
+document.getElementById('ValueMul').innerHTML=ValueMul;
+
+var ValueDiv = NumCalcOne / NumCalcTwo ;
+document.getElementById('ValueDiv').innerHTML=ValueDiv;
+
+}
+
+//-->
+</script>
+
+
+
+<main>
+<header>
+
+<H1>This is just some basic match, add, subtract, multiple and divide </H1>
+ 
+</header>
+
+<script src="modernizr.custom.65897.js"></script>
+
+
+
+<input type=text id=NumOneInput style="TextAlign:Right;" size='6'> 
+<input type=text id=NumTwoInput style="TextAlign:Right;" size='6'>
+
+<input type=button value='DoTheMath' size=5 onClick="result();"><br><br>
+
+If you add you get: <br>
+<h2><div id='ValueAdd'></div></h2><br><br>
+If you subtract you get: <br>
+<h2><div id='ValueSub'></div></h2><br><br>
+If you multiply you get: <br>
+<h2> <div id='ValueMul'></div></h2><br><br>
+If you divide you get:  <br>
+<h2><div id='ValueDiv'></div>
+</main>
+</body>
+
+
+<footer style="color: #003366;
+			font-size: .70em;
+			font-style: italic;
+			text-align: center;
+			text-color: #C0C0C0;
+			padding: 1em;">
+Created by: James Kamienski &copy 2021 / Powered by Notepad
+</footer>
+
+</html>
