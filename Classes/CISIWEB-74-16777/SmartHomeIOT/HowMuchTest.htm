@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<link href="site.css" rel="stylesheet"> 
+
+<div id="wrapper">
+
+<header>
+	<center>
+		<h1>Smart home, stupid users</h1>
+	</center>
+</header>
+<script src="modernizr.custom.05819.js"></script>
+<nav>
+	<ul>
+		<li><a href="index.htm">Home</a></li>
+		<li><a href="WhatIsIt.htm">What is it?</a></li>
+		<li><a href="PageHolder2.html">PageHolder2</a></li>
+		<li><a href="PageHolder3.html">PageHolder3</a></li>
+		<li><a href="PageHolder4.html">PageHolder4</a></li>
+		<li><a href="CostCalc.htm">How much?</a></li>
+		<li><a href="SimpleMath.htm">SimpleMath</a></li>
+	</ul>
+</nav>
+
+
+<main>
+
+
+
+   <article>
+      <h2>Lunch selections</h2>
+      <form>
+         <input type="checkbox" id="item1" value="8" />
+         <label for="item1">Smart outlet @($15)</label>
+         <input type="checkbox" id="item2" value="9" />
+         <label for="item2">Smart bulb</label>
+         <input type="checkbox" id="item3" value="8" />
+         <label for="item3">Smart hub</label>
+         <input type="checkbox" id="item4" value="13" />
+         <label for="item4">Voice assistant (screen)</label>
+         <input type="checkbox" id="item5" value="6" />
+         <label for="item5">Voice assistant (no screen)</label>
+         <input type="submit" id="submit" value="Submit" />
+      </form>
+   </article>
+
+
+
+<script>
+
+function calcTotal() {
+var itemTotal = 0;
+var item1 = document.getElementById("item1");
+var item2 = document.getElementById("item2");
+var item3 = document.getElementById("item3");
+
+var item4 = document.getElementById("item4");
+var item5 = document.getElementById("item5");
+(item1.checked) ? (itemTotal += 8) : (itemTotal += 0);
+(item2.checked) ? (itemTotal += 9) : (itemTotal += 0);
+(item3.checked) ? (itemTotal += 8) : (itemTotal += 0);
+(item4.checked) ? (itemTotal += 13) : (itemTotal += 0);
+(item5.checked) ? (itemTotal += 6) : (itemTotal += 0);
+var salesTaxRate = 0.07;
+itemTotal *= 100;
+var orderTotal = (itemTotal + (itemTotal * salesTaxRate))/100;
+alert("Your order total is $" + orderTotal);
+}
+document.getElementById("submit").
+addEventListener("click", calcTotal, false);
+
+</script>
+
+</main>
+</body>
+</html>
