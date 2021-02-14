@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <!--
+      JavaScript 6th Edition
+      Chapter 3
+      Hands-on Project 3-3
+
+      Author: James Kamienski
+      Date:   02/14/2021
+
+      Filename: index.htm
+   -->
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+   <title>Hands-on Project 3-3</title>
+   <link rel="stylesheet" href="styles.css" />
+   <script src="modernizr.custom.05819.js"></script>
+</head>
+
+<body>
+   <header>
+      <h1>
+         Hands-on Project 3-3
+      </h1>
+   </header>
+
+   <article>
+      <h2>Scouting Locations</h2>
+      <div id="results">
+          <ul>
+             <li id="item1"></li>
+             <li id="item2"></li>
+             <li id="item3"></li>
+             <li id="item4"></li>
+             <li id="item5"></li>
+          </ul>
+      </div>
+   </article>
+   <script>
+		// Set variable places, and name 5 places
+		var places = ["The Park", "Iowa", "Jamaica", "Hell", "Disneyland"];
+		// Create function processPlaces
+		function processPlaces () {
+			//Creat loop, where i=0, is less than 5 and increments
+   			for (var i = 0; i < 5; i++) {
+			// Set variable listItem to array value (i+1)
+			var listItem = "item" + (i + 1);
+			// Set HTML listitem to array value
+			document.getElementById(listItem).innerHTML = places[i];
+			}
+			}
+			
+		if (window.addEventListener) {
+		window.addEventListener("load", processPlaces, false);
+		} else if (window.attachEvent) {
+		window.attachEvent("onload", processPlaces);
+		}
+	</script>
+   
+</body>
+</html>
