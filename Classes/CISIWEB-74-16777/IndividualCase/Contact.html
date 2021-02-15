@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+<title>Contact us</title>
+<link href="./../CSS/MLD.css" rel="stylesheet">
+<link rel="icon" href="./../Images/favicon.ico" type="image/ico">
+
+<div id="wrapper">
+
+<header>
+<script src="modernizr.custom.05819.js"></script>
+
+<h1>Reach out and say hello</h1>
+We'd love to hear from you
+ 
+
+<script>
+
+function validateForm() {
+  var CheckForName = document.forms["ContactForm"]["YourName"].value;
+  
+  if (CheckForName == "") {
+    alert("We'd like to know who you are, please fill out your name");
+    return false;
+  }
+  
+  var CheckEmailFormat = document.forms["ContactForm"]["RequestorEmail"].value;
+  
+  if (CheckEmailFormat !== ""){
+  alert("Your email isn't blank");
+  // CheckEmailFormat.Includes("@"){
+  // }
+  // Else {
+	//alert("A valid email requires the @ symbol");
+  //}
+  
+  }
+  
+  
+}
+</script>
+
+
+ 
+ 
+ 
+</header>
+
+<nav>
+<ul>
+		<li><a href="index.htm">Home</a></li>
+		<li><a href="PageHolder1.html">PageHolder1</a></li>
+		<li><a href="PageHolder2.html">PageHolder2</a></li>
+		<li><a href="PageHolder3.html">PageHolder3</a></li>
+		<li><a href="PageHolder4.html">PageHolder4</a></li>
+		<li><a href="SimpleMath.htm">SimpleMath</a></li>
+
+</ul>
+</nav>
+
+
+<main style="background:gray">
+
+<body>
+<div id="tablefloat">
+
+<br>
+
+
+
+
+<table style="border:2px solid black;margin-left:auto;margin-right:auto;background-color:white">
+<tr style="height:20px">
+<th style="min-width:100px">
+Fill out the form for additional information.
+</th>
+
+<th style="min-width:15px">
+</th>
+
+<th>
+Other ways to reach us
+</th>
+</tr>
+
+<tr style="height:20px">
+
+<td>
+</td>
+
+<td>
+</td>
+
+<td>
+</td>
+
+
+</tr>
+
+
+<tr>
+<td align=right>
+
+<!-- <form method="post" action="Contact.html" onsubmit="return validateForm();">
+-->
+
+<form name="ContactForm" method="post" action="Contact.html" onsubmit="return validateForm()";
+
+
+<label for="RequestorName">Your Name*:</label>
+<input type="text" name="RequestorName" id="YourName"><br>
+
+<label for="YourEmail">E-mail:</label>
+<input type="email" name="RequestorEmail" id="RequestorEmail"><br>
+
+<label for="YourPhone">Phone:</label>
+<input type="tel" name="RequestorPhone" id="RequestorPhone"><br>
+
+
+<label for="RequestorAddress1">Your Adress:</label>
+<input type="text" name="RequestorAddress1" id="YourAddress1"><br>
+
+<label for="RequestorCity">City:</label>
+<input type="text" name="YourCity" id="YourCity"><br>
+
+<label for="YourState">State:</label>
+<input type="text" name="YourState" id="YourState"><br>
+
+<label for="YourZip">Zip:</label>
+<input type="text" name="YourZip" id="YourZip"><br>
+
+
+<label for="RequestorMoreInfo">Would you like more information?</label>
+<input type="checkbox" name="RequestorMoreInfo" id="RequestorMoreInfo"><br>
+
+<label for="RequestorComments">Comments:</label>
+<textarea name="RequestorComments" id="RequestorComments" rows="4" cols="25"></textarea><br>
+
+* Required
+
+<input id="mySubmit" type="submit" value="Send Now">
+</form>
+
+
+
+
+
+</td>
+
+<td>
+
+</td>
+
+
+<td>
+
+<a href="mailto:user@domain.com">E-mail</a>
+<br>
+<br>
+
+
+
+<a href="tel:909-555-1212">Phone</a><br>
+
+<br>
+Or by mail<br>
+<br>
+James Kamienski<br>
+123 Any Street<br>
+City, ST 00000<br>
+<br>
+
+
+<br><br><br>
+
+</td>
+
+
+
+</tr>
+</table>
+
+
+
+<br>
+
+
+
+</div>
+
+</body>
+</main>
+
+
+	
+
+<footer>
+Created by: James Kamienski 2021</a>
+
+</footer>
+</div>	
+
+
+</html>

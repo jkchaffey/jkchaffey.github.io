@@ -6,8 +6,8 @@
       Chapter 3
       Hands-on Project 3-4
 
-      Author: 
-      Date:   
+      Author: James Kamienski
+      Date:   02/14/2021
 
       Filename: index.htm
    -->
@@ -48,5 +48,41 @@
           </fieldset>
       </form>
    </article>
+   <script>
+   // 3. Within the script section create two global variables: one named i with a value of , and the other named listItem with its value set to an empty string
+   var i = 1;
+   var listItem = "";
+   // 4. Below the variables, create a function called processInput(). Within the function, create an if statement that runs if the value of i is less than or equal to . 
+   function processInput(){
+   if (i <= 5 ){
+   // 4a. Set the value of the listItem variable to the string “item” concatenated with the value of i.
+   var listItem = "item" + i;
+   // 4b. Set the content of the element with an id equal to listItem to the value of the element with the id of toolbox.
+   document.getElementById(listItem).innerHTML = document.getElementById("toolBox").value;
+  
+   //4c. Set the value of the element with the id of toolbox to an empty string
+   document.getElementById("toolBox").value = "";
+   // 5. Before the closing } of the if statement, create a nested if statement. If the value of i is eual to 5, the statement should change the content of the element with the id of resultsExpl to the string “Thanks for your suggestions.”
+   if (i===5) {
+   document.getElementById("resultsExpl").innerHTML = "Thanks for your suggestions.";
+   }
+   
+   // 6. Before the closing } of the main if statement, after the nested if statement, add a statement to increment the value of i by .
+   i++;
+   
+   }
+   
+   }
+   
+   var backwardbtn = document.getElementById("button");
+   
+   if (backwardbtn.addEventListener){
+   backwardbtn.addEventListener("click", processInput, false);
+   } else if (backwardbtn.attachEvent){
+   backwardbtn.attachEvent ("onclick", processInput);
+   }
+   
+   
+   </script>
 </body>
 </html>

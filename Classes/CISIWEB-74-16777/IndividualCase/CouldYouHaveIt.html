@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<link href="site.css" rel="stylesheet"> 
+<div id="wrapper">
+
+<header>
+
+<h1>Could you have it?</h1>
+ 
+</header>
+<script src="modernizr.custom.05819.js"></script>
+<nav>
+<ul>
+		<li><a href="index.htm">Home</a></li>
+		<li><a href="PageHolder1.html">PageHolder1</a></li>
+		<li><a href="PageHolder2.html">PageHolder2</a></li>
+		<li><a href="PageHolder3.html">PageHolder3</a></li>
+		<li><a href="PageHolder4.html">PageHolder4</a></li>
+		<li><a href="SimpleMath.htm">SimpleMath</a></li>
+
+</ul>
+</nav>
+
+<main>
+<p>
+MLD is a rare disease and requires both parents to have or be a carrier in order for the child to have the disease. If either parent has or is a carrier there is also the risk that they will pass on the gene to the child and they will be a carrier yet not affected by the disease.
+<br>
+<br>
+<br>
+
+
+<label for="mother">Mother:</label>
+<select id="mother" name="mother">
+  <option value="MHA">Has disease</option>
+  <option value="MCA">Carrier</option>
+  <option value="MNA">No disease or carrier</option>
+</select>
+<label for="father">Father:</label>
+<select id="father" name="father">
+  <option value="FHA">Has disease</option>
+  <option value="FCA">Carrier</option>
+  <option value="FNA">No disease or carrier</option>
+</select>
+
+<br>
+<br>
+
+
+
+
+<!--
+	  
+	  
+# If father = FNA or mother = MNA , no disease
+# mother has and father has = 100%
+# mother has and father carrier or if father has and mother carrier = 75
+# mother carrier and father carrier = 25 %
+	  
+	  
+	  
+-->	  
+	  
+<fieldset>	  
+
+            <button type="button" id="button">Submit</button>
+		  
+
+
+<button onClick="window.location.reload();">Try new options</button>
+</fieldset>
+</form>
+</article>
+   
+   
+
+
+<br>
+Here is your disease risk: <br>
+<p id="DiseaseChance"></p>
+
+
+   
+   
+
+
+
+<script>
+
+
+
+function CalcTheRisk(){
+
+// document.getElementById("DiseaseChance").innerHTML = "";
+
+	if (document.querySelector('#mother').value == "MHA" && document.querySelector('#father').value == "FHA"){
+		document.getElementById("DiseaseChance").innerHTML = "Mother and Father have it, 100% child will have";
+		}
+
+	else if (document.querySelector('#mother').value == "MNA" && document.querySelector('#father').value == "FNA"){
+		document.getElementById("DiseaseChance").innerHTML = "Mother and Father do not have it and are not carriers, 100% child will not have";
+		}
+
+
+	else if (document.querySelector('#mother').value == "MHA" && document.querySelector('#father').value == "FCA"){
+		document.getElementById("DiseaseChance").innerHTML = "Mother has it, father is a carrier, you could be a carrier";
+		}
+		
+	else if (document.querySelector('#mother').value == "MHA" && document.querySelector('#father').value == "FNA"){
+		document.getElementById("DiseaseChance").innerHTML = "Mother has it, father does not you will not have the disease, but you can be a carrier.";
+		}
+	
+	
+	else if (document.querySelector('#mother').value == "MCA"){
+
+		if (document.querySelector('#father').value == "FHA"){
+			document.getElementById("DiseaseChance").innerHTML = "Mother is a carrier and Father has it";
+		}
+		else if (document.querySelector('#father').value == "FCA"){
+			document.getElementById("DiseaseChance").innerHTML = "Mother is a carrier, father is a carrier.";
+		}
+		else if (document.querySelector('#father').value == "FNA"){
+			document.getElementById("DiseaseChance").innerHTML = "Mother is a carrier and, father does not.";
+		}
+	}
+
+	else if (document.querySelector('#mother').value == "MNA"){
+
+		if (document.querySelector('#father').value == "FHA"){
+			document.getElementById("DiseaseChance").innerHTML = "Mother does not have and Father has it, you could be a carrier.";
+		}
+		else if (document.querySelector('#father').value == "FCA"){
+			document.getElementById("DiseaseChance").innerHTML = "Mother is a does not have, father is a carrier, you could be a carrier.";
+		}
+	}
+}
+
+
+ 
+
+
+
+
+
+
+
+
+
+ var backwardbtn = document.getElementById("button");
+   
+   if (backwardbtn.addEventListener){
+   backwardbtn.addEventListener("click", CalcTheRisk, false);
+   } else if (backwardbtn.attachEvent){
+   backwardbtn.attachEvent ("onclick", CalcTheRisk);
+   }
+   </script>
+
+
+
+
+</main>
+</div>
+
+<footer>
+Created by: James Kamienski &copy 2021 / Powered by Notepad
+</footer>
+
+
+
+
+
+
+
+
+</html>
