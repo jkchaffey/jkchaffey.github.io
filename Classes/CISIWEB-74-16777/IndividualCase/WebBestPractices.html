@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<link href="site.css" rel="stylesheet"> 
+<div id="wrapper">
+
+<header>
+
+<h1>Web Security</h1>
+ 
+</header>
+<script src="modernizr.custom.65897.js"></script>
+<nav>
+<ul>
+		<li><a href="index.htm">Home</a></li>
+		<li><a href="PageHolder1.html">PageHolder1</a></li>
+		<li><a href="PageHolder2.html">PageHolder2</a></li>
+		<li><a href="PageHolder3.html">PageHolder3</a></li>
+		<li><a href="PageHolder4.html">PageHolder4</a></li>
+		<li><a href="SimpleMath.htm">SimpleMath</a></li>
+
+</ul>
+</nav>
+
+<main>
+
+<p>A web browser is what most people use to access different content on the internet. Whether it is browsing websites, logging into email, playing some games in a browser or using a web enabled application the browser is the primary application. Internet security is very important.</p>
+<h3>Use the web safely</h3> 
+
+<li>Keep your software (operating system, anti virus and browser) up to date:</li>
+<ul>You should always run updates to keep your operating system current and be running the latest version of your web browser and virus definitions to help protect yourself from vulnerabilities.</ul>
+<br>
+
+<li>Be careful what you download:</li>
+<ul>Only download items from trusted sources/sites and make sure to scan them for viruses after download before running.</ul>
+<br>
+<li>Go to secure websites:</li>
+<ul>Connect to websites that use security https in their URL in order to ensure your data sent between you and the site is encrypted and protected.</ul>
+
+<br>
+<h3>More information</h3>
+<A HREF="https://usa.kaspersky.com/resource-center/preemptive-safety/top-10-internet-safety-rules-and-what-not-to-do-online">Top 10 Internet Safety Rules & What Not to Do Online</A>
+A short top 10 list mainly of what to do in order to protect yourself online by Kaspersky creators of internet secrurity tools.
+<br>
+<br>
+<A HREF="https://www.getsafeonline.org/protecting-your-computer/safe-internet-use/">Safe internet use</A>
+Several tips on how to use the internet safely to avoid the the risks also presented in this article.
+<br>
+<br>
+<A HREF="https://support.mozilla.org/en-US/kb/how-stay-safe-web">How to stay safe on the web</A>
+From mozilla (makers of the Firefox browser) is a list tips including how to keep your software up to date, along with specific Firefox settings.
+
+<br>
+<br>
+<h3>Browser data retrieved via Javascript</h3>
+Because you are using a web browser don't think you are safe on the internet and anonoymous. Many things can be determined information from and about and the web browser.
+<br>
+<br>
+Since there are new ways to gather this data the old browser check usually doesn't work, returning only Netscape:
+<ul id="insecureinfo_appName"></ul>
+Information can be gathered like what platform you're running on:
+<ul id="insecureinfo_platform"></ul>
+<BR>
+How wide your screen is:
+<ul id="insecureinfo_width"></ul>
+<BR>
+How tall your screen is:
+<ul id="insecureinfo_height"></ul>
+<BR>
+How much color you're dealing with (color depth):
+<ul id="insecureinfo_colorDepth"></ul>
+<BR>
+I can even retrieve your user agent which helps identify your browser and version and sometimes more operating sytem information than above
+<ul id="insecureinfo_userAgent"></ul>
+<BR>
+As a bonus I even can determine if you have cookies enabled or not, is it true of false? It's most definitely
+
+<ul id="insecureinfo_cookieenabled"></ul>
+
+
+
+<br>
+<h3>Stay safe out there....</h3>
+
+</main>
+
+
+<script>
+
+/*Find all the info and set, even if not there*/
+
+document.getElementById('insecureinfo_appName').innerHTML = navigator.appName;
+document.getElementById('insecureinfo_platform').innerHTML = navigator.platform;
+document.getElementById('insecureinfo_userAgent').innerHTML = navigator.userAgent;
+document.getElementById('insecureinfo_colorDepth').innerHTML = screen.colorDepth;
+document.getElementById('insecureinfo_height').innerHTML = screen.height;
+document.getElementById('insecureinfo_width').innerHTML = screen.width;
+
+document.getElementById('insecureinfo_cookieenabled').innerHTML = navigator.cookieEnabled;
+
+</script>
+
+
+
+</div>
+
+<footer>
+Created by: James Kamienski &copy 2021 / Powered by Notepad++
+</footer>
+
+</html>
