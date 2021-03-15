@@ -29,12 +29,22 @@ What Pizza?
 <label for="msauce">Marinara</label>
 <input id="bsauce" name="Barbecue" type="checkbox">
 <label for="bsauce">Barbecue</label>
-<input id="msauce" name="Alfredo" type="checkbox">
-<label for="msauce">Alfredo</label>
+<input id="asauce" name="Alfredo" type="checkbox">
+<label for="asauce">Alfredo</label>
 </fieldset>
 
 <fieldset id="Toppings" class="text">
-Toppings
+<input id="ptopping" name="Pepperoni" type="checkbox">
+<label for="ptopping">Pepperoni</label>
+<input id="stopping" name="Sausage" type="checkbox">
+<label for="stopping">Sausage</label>
+<input id="ctopping" name="Chicken" type="checkbox">
+<label for="ctopping">Chicken</label>
+<input id="gtopping" name="GreenPeppers" type="checkbox">
+<label for="gtopping">Green Peppers</label>
+<input id="mtopping" name="Mushrooms" type="checkbox">
+<label for="mtopping">Mushrooms</label>
+
 </fieldset>
 
 <fieldset id="DeliveryInfo" class="text">
@@ -180,6 +190,8 @@ Toppings
             <label for="BillPhone">Phone</label>
             <input type="number" id="BillPhone" name="BillingPhone" required />
           </fieldset>
+
+<input type="button" value="Submit Order" onclick="SubmitOrder()">
 
 </form>
 

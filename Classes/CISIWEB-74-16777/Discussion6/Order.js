@@ -13,40 +13,46 @@ document.getElementById("BillFNLName").innerHTML = document.getElementById("Deli
 /* create event listeners */
 function createEventListeners() {
 
-   var same = document.getElementById("BillSameDel");
-   if (same.addEventListener) {
-     same.addEventListener("click", copyDeliveryToBilling, false);
-   } else if (same.attachEvent)  {
-     same.attachEvent("onclick", copyDeliveryToBilling);
+  
+  
+  
+  
    }
 
 }
 
+function SubmitOrder()
+       {
+		
+           if (validateFormText() == false)
+           {
+           alert("You are missing some information, please check and submit again.");
+           return;
+           }   
+	   }
+
+       function validateFormText()
+       {
+           var customer = document.DeliveryInfo.DeliveryFNLName.value;
+           if (customer.length == 0) return false;
+           var address = document.DeliveryInfo.address.value;
+           if (address.length == 0) return false;
+           var city = document.DeliveryInfo.city.value;
+           if (city.length == 0) return false;
+           var state = document.DeliveryInfo.state.selectedIndex;
+           if (state == 0) return false;
+           var phone = document.DeliveryInfo.phone.value;
+           if (phone.length == 0) return false;
+           var email = document.DeliveryInfo.email.value;
+           if (email.length == 0) return false;
+           return true;
+       }
 
 
 
 
 
 
-
-
-
-/* copy Delivery Info to Billing */
-function copyDeliveryToBilling() {
-   var BillingFormData = document.querySelectorAll("#BillingInfo input");
-   var DeliveryFormData = document.querySelectorAll("#DeliveryInfo input");
-   if (document.getElementById("BillSameDel").checked) {
-      for (var i = 0; i < DeliveryFormData.length; i++) {
-         BillingFormData[i + 1].value = DeliveryFormData[i].value;
-      }
-      document.querySelector("#BillingInfo select").value = document.querySelector("#DeliveryInfo select").value;
-   } else {
-      for (var i = 0; i < DeliveryInfo.length; i++) {
-         BillingInfo[i + 1].value = "";
-      }
-      document.querySelector("#BillingInfo select").selectedIndex = -1;
-   }
-}
 
 
 
