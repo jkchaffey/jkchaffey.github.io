@@ -1,0 +1,188 @@
+<link rel="stylesheet" href="OrderStyle.css"/>
+
+<H3>Get a "Pizza" This</H3>
+
+Our website may be ugly, but our pizza is yummy!
+
+<form>
+What Pizza?
+<fieldset id="Crust" class="text">
+<input id="ocrust" name="Original" type="checkbox">
+<label for="ocrust">Original</label>
+
+<input id="tcrust" name="Thin" type="checkbox">
+<label for="tcrust">Thin</label>
+
+<input id="dcrust" name="Pan" type="checkbox">
+<label for="dcrust">Pan</label>
+
+<input id="scrust" name="Stuffed" type="checkbox">
+<label for="scrust">Stuffed</label>
+
+<input id="gfcrust" name="Gluten Free" type="checkbox">
+<label for="gfcrust">Gluten Free</label>
+
+</fieldset>
+
+<fieldset id="Sauce" class="text">
+<input id="msauce" name="Marinara" type="checkbox">
+<label for="msauce">Marinara</label>
+<input id="bsauce" name="Barbecue" type="checkbox">
+<label for="bsauce">Barbecue</label>
+<input id="msauce" name="Alfredo" type="checkbox">
+<label for="msauce">Alfredo</label>
+</fieldset>
+
+<fieldset id="Toppings" class="text">
+Toppings
+</fieldset>
+
+<fieldset id="DeliveryInfo" class="text">
+            <legend>Deliverying Address</legend>
+			
+			
+            <label for="DeliveryFNLName">First And Last Name</label>
+            <input type="text" id="DeliveryFNLName" name="DeliveryFirstAndLastName" required />
+            <label for="DeliveryStreet">Street Address</label>
+            <input type="text" id="DeliveryStreet" name="DeliveryingStreet" required />
+            <label for="DeliveryCity">City</label>
+            <input type="text" id="DeliveryCity" name="DeliveryingCity" required />
+            <label for="DeliveryState">State</label>
+            <select id="DeliveryState" name="DeliveryingState" required="required">
+               <option value="AL">AL</option>
+               <option value="AK">AK</option>
+               <option value="AZ">AZ</option>
+               <option value="AR">AR</option>
+               <option value="CA">CA</option>
+               <option value="CO">CO</option>
+               <option value="CT">CT</option>
+               <option value="DE">DE</option>
+               <option value="DC">DC</option>
+               <option value="FL">FL</option>
+               <option value="GA">GA</option>
+               <option value="HI">HI</option>
+               <option value="ID">ID</option>
+               <option value="IL">IL</option>
+               <option value="IN">IN</option>
+               <option value="IA">IA</option>
+               <option value="KS">KS</option>
+               <option value="KY">KY</option>
+               <option value="LA">LA</option>
+               <option value="ME">ME</option>
+               <option value="MD">MD</option>
+               <option value="MA">MA</option>
+               <option value="MI">MI</option>
+               <option value="MN">MN</option>
+               <option value="MS">MS</option>
+               <option value="MO">MO</option>
+               <option value="MT">MT</option>
+               <option value="NE">NE</option>
+               <option value="NV">NV</option>
+               <option value="NH">NH</option>
+               <option value="NJ">NJ</option>
+               <option value="NM">NM</option>
+               <option value="NY">NY</option>
+               <option value="NC">NC</option>
+               <option value="ND">ND</option>
+               <option value="OH">OH</option>
+               <option value="OK">OK</option>
+               <option value="OR">OR</option>
+               <option value="PA">PA</option>
+               <option value="RI">RI</option>
+               <option value="SC">SC</option>
+               <option value="SD">SD</option>
+               <option value="TN">TN</option>
+               <option value="TX">TX</option>
+               <option value="UT">UT</option>
+               <option value="VT">VT</option>
+               <option value="VA">VA</option>
+               <option value="WA">WA</option>
+               <option value="WV">WV</option>
+               <option value="WI">WI</option>
+               <option value="WY">WY</option>
+            </select>
+            <label for="DeliveryZip">Zip</label>
+            <input type="number" id="DeliveryZip" name="DeliveryingZip" maxlength="5" required />
+            <label for="DeliveryPhone">Phone</label>
+            <input type="number" id="DeliveryPhone" name="DeliveryingPhone" required />
+          </fieldset>
+
+
+
+
+
+<fieldset id="BillingInfo" class="text">
+            <legend>Billing Address</legend>
+			 <label for="BillSameDel">Same as delivery address:</label>
+			 <input type="checkbox" name="BillSameDelivery" id="BillSameDel"/>
+            <label for="BillFNLName">First And Last Name</label>
+            <input type="text" id="BillFNLName" name="BillFirstAndLastName" required />
+            <label for="BillStreet">Street Address</label>
+            <input type="text" id="BillStreet" name="BillingStreet" required />
+            <label for="BillCity">City</label>
+            <input type="text" id="BillCity" name="BillingCity" required />
+            <label for="BillState">State</label>
+            <select id="BillState" name="BillingState" required="required">
+               <option value="AL">AL</option>
+               <option value="AK">AK</option>
+               <option value="AZ">AZ</option>
+               <option value="AR">AR</option>
+               <option value="CA">CA</option>
+               <option value="CO">CO</option>
+               <option value="CT">CT</option>
+               <option value="DE">DE</option>
+               <option value="DC">DC</option>
+               <option value="FL">FL</option>
+               <option value="GA">GA</option>
+               <option value="HI">HI</option>
+               <option value="ID">ID</option>
+               <option value="IL">IL</option>
+               <option value="IN">IN</option>
+               <option value="IA">IA</option>
+               <option value="KS">KS</option>
+               <option value="KY">KY</option>
+               <option value="LA">LA</option>
+               <option value="ME">ME</option>
+               <option value="MD">MD</option>
+               <option value="MA">MA</option>
+               <option value="MI">MI</option>
+               <option value="MN">MN</option>
+               <option value="MS">MS</option>
+               <option value="MO">MO</option>
+               <option value="MT">MT</option>
+               <option value="NE">NE</option>
+               <option value="NV">NV</option>
+               <option value="NH">NH</option>
+               <option value="NJ">NJ</option>
+               <option value="NM">NM</option>
+               <option value="NY">NY</option>
+               <option value="NC">NC</option>
+               <option value="ND">ND</option>
+               <option value="OH">OH</option>
+               <option value="OK">OK</option>
+               <option value="OR">OR</option>
+               <option value="PA">PA</option>
+               <option value="RI">RI</option>
+               <option value="SC">SC</option>
+               <option value="SD">SD</option>
+               <option value="TN">TN</option>
+               <option value="TX">TX</option>
+               <option value="UT">UT</option>
+               <option value="VT">VT</option>
+               <option value="VA">VA</option>
+               <option value="WA">WA</option>
+               <option value="WV">WV</option>
+               <option value="WI">WI</option>
+               <option value="WY">WY</option>
+            </select>
+            <label for="BillZip">Zip</label>
+            <input type="number" id="BillZip" name="BillingZip" maxlength="5" required />
+            <label for="BillPhone">Phone</label>
+            <input type="number" id="BillPhone" name="BillingPhone" required />
+          </fieldset>
+
+</form>
+
+<script src="Order.js"></script>
+
+
