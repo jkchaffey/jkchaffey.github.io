@@ -18,23 +18,39 @@
 
 <h1> To Date:</h1>
 
-<label for="RequestorName">Month:</label>
-<input type="text" name="DateToMonth" id="DateToMonth">
-
-<label for="RequestorName">Day:</label>
-<input type="text" name="DateToDay" id="DateToDay">
-
-<label for="RequestorName">Year:</label>
-<input type="text" name="DateToYear" id="DateToYear"><br>
-
-
-
- <fieldset>
-            <button type="button" id="calcBetweenButton">Calculate between dates</button>
- </fieldset>
-
-
+<fieldset>
+	<label for="RequestorName">Month:</label>
 </fieldset>
+
+<fieldset>
+	<input type="text" name="DateToMonth" id="DateToMonth">
+</fieldset>
+
+<fieldset>
+	<label for="RequestorName">Day:</label>
+</fieldset>
+
+<fieldset>
+	<input type="text" name="DateToDay" id="DateToDay">
+</fieldset>
+
+
+<fieldset>
+	<label for="RequestorName">Year:</label>
+</fieldset>
+
+
+<fieldset>
+	<input type="text" name="DateToYear" id="DateToYear"><br>
+ <fieldset>
+
+
+
+            <button type="button" id="calcBetweenButton">Calculate between dates</button>
+
+
+
+
 </form>
 
 
@@ -61,7 +77,8 @@ document.getElementById("DateBetweenYear").InnerHTML = "YR";
      
 	 
 	 
-     resultElement.innerHTML = root.toFixed(2);
+     // Set and calc values here
+	 
 	 
 	 
 	 
