@@ -49,13 +49,18 @@
 
 <script>
   
-  var valueElement = document.getElementById("value");
-  var resultElement = document.getElementById("sqRoot");
+
+// document.getElementById("DateFromMonth")
+
+document.getElementById("DateBetweenMonth").InnerHTML = "MO";
+document.getElementById("DateBetweenDay").InnerHTML = "DY";
+document.getElementById("DateBetweenYear").InnerHTML = "YR";
+
 
   function calcDates() {
      
 	 
-	 var root = Math.sqrt(valueElement.value);
+	 
      resultElement.innerHTML = root.toFixed(2);
 	 
 	 
