@@ -1,36 +1,91 @@
+<body>
+
 <form name="ContactForm" method="post" action="ContactV3.html" onsubmit="return validateForm()";
 
+<fieldset>
+
 <h1> From Date:</h1>
-<label for="RequestorName">Your Name*:</label>
+<label for="RequestorName">Month:</label>
 <input type="text" name="DateFromMonth" id="DateFromMonth"><br>
 
-<label for="YourEmail">E-mail:</label>
-<input type="email" name="RequestorEmail" id="RequestorEmail"><br>
+<label for="RequestorName">Day:</label>
+<input type="text" name="DateFromDay" id="DateFromMonth"><br>
 
-<label for="YourPhone">Phone:</label>
-<input type="tel" name="RequestorPhone" id="RequestorPhone"><br>
-
-
-<label for="RequestorAddress1">Your Adress:</label>
-<input type="text" name="RequestorAddress1" id="YourAddress1"><br>
-
-<label for="RequestorCity">City:</label>
-<input type="text" name="YourCity" id="YourCity"><br>
-
-<label for="YourState">State:</label>
-<input type="text" name="YourState" id="YourState"><br>
-
-<label for="YourZip">Zip:</label>
-<input type="text" name="YourZip" id="YourZip"><br>
+<label for="RequestorName">Year:</label>
+<input type="text" name="DateFromYear" id="DateFromMonth"><br>
 
 
-<label for="RequestorMoreInfo">Would you like more information?</label>
-<input type="checkbox" name="RequestorMoreInfo" id="RequestorMoreInfo"><br>
 
-<label for="RequestorComments">Comments:</label>
-<textarea name="RequestorComments" id="RequestorComments" rows="4" cols="25"></textarea><br>
+<h1> To Date:</h1>
 
-* Required
+<label for="RequestorName">Month:</label>
+<input type="text" name="DateToMonth" id="DateToMonth">
 
-<input id="mySubmit" type="submit" value="Send Now">
+<label for="RequestorName">Day:</label>
+<input type="text" name="DateToDay" id="DateToDay">
+
+<label for="RequestorName">Year:</label>
+<input type="text" name="DateToYear" id="DateToYear"><br>
+
+
+
+ <fieldset>
+            <button type="button" id="calcBetweenButton">Calculate between dates</button>
+ </fieldset>
+
+
+</fieldset>
 </form>
+
+
+
+<p id="DateBetweenMonth"></p>
+<p id="DateBetweenDay"></p>
+<p id="DateBetweenYear"></p>
+
+
+
+
+
+<script>
+  
+  var valueElement = document.getElementById("value");
+  var resultElement = document.getElementById("sqRoot");
+
+  function calcDates() {
+     
+	 
+	 var root = Math.sqrt(valueElement.value);
+     resultElement.innerHTML = root.toFixed(2);
+	 
+	 
+	 
+  }
+   //add event listerners to calc button to calc dates
+   
+   
+  function createEventListener() {
+     var submitButton = document.getElementById("calcBetweenButton");
+       if(submitButton.addEventListener) {
+         submitButton.addEventListener("click", calcDates, false);
+       } else if (submitButton.attachEvent) {
+         submitButton.attachEvent("onclick", calcDates);
+       }
+
+        }
+
+   if (window.addEventListener) {
+     window.addEventListener("load",createEventListener, false);
+   } else if (window.attachEvent) {
+     window.attachEvent("onload", createEventListener);
+   }
+</script>
+
+
+
+
+
+
+
+
+</body>
