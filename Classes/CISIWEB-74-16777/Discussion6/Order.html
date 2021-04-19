@@ -1,11 +1,23 @@
 <link rel="stylesheet" href="OrderStyle.css"/>
+<body BGCOLOR="	#CD5C5C">
+<center><H3>Pizza Order Form</H3></center>
 
-<H3>Get a "Pizza" This</H3>
-
-Our website may be ugly, but our pizza is yummy!
-
+<center><p>Our website may be ugly, but our pizza is yummy!</p></center>
+<br>
 <form>
-What Pizza?
+<center><p>What Pizza would you like to order?<br>
+Select your options below:</p></center>
+<br>
+<br>
+<table bgcolor="#FFA07A">
+<tr>
+<th>Crust</th>
+<th>Sauce</th>
+<th>Toppings</th>
+</tr>
+<tr>
+<td>
+
 <fieldset id="Crust" class="text">
 <input id="ocrust" name="Original" type="checkbox">
 <label for="ocrust">Original</label>
@@ -23,22 +35,54 @@ What Pizza?
 <label for="gfcrust">Gluten Free</label>
 
 </fieldset>
+</td>
 
+<td>
 <fieldset id="Sauce" class="text">
 <input id="msauce" name="Marinara" type="checkbox">
 <label for="msauce">Marinara</label>
 <input id="bsauce" name="Barbecue" type="checkbox">
 <label for="bsauce">Barbecue</label>
-<input id="msauce" name="Alfredo" type="checkbox">
-<label for="msauce">Alfredo</label>
+<input id="asauce" name="Alfredo" type="checkbox">
+<label for="asauce">Alfredo</label>
 </fieldset>
+</td>
 
+<td>
 <fieldset id="Toppings" class="text">
-Toppings
+
+<label for="ptopping">Pepperoni</label>
+<input id="ptopping" name="Pepperoni" type="checkbox">
+
+<label>Sausage</label>
+<input id="stopping" name="Sausage" type="checkbox">
+<label for="stopping">Sausage</label>
+<input id="ctopping" name="Chicken" type="checkbox">
+<label for="ctopping">Chicken</label>
+<input id="gtopping" name="GreenPeppers" type="checkbox">
+<label for="gtopping">Green Peppers</label>
+<input id="mtopping" name="Mushrooms" type="checkbox">
+<label for="mtopping">Mushrooms</label>
+</td>
+</tr>
+</table>
 </fieldset>
 
-<fieldset id="DeliveryInfo" class="text">
-            <legend>Deliverying Address</legend>
+
+<br>
+<br>
+<br>
+
+
+<center><p>Sorry (not sorry) our pizzas aren't free<br>
+Enter your delivery and billing information:</p></center>
+<br>
+
+<table bgcolor="#FFA07A">
+<tr>
+<td>
+<fieldset id="DeliveryInfo" class="text" style="background-color:#DB7093">
+            <legend>Delivery Address</legend>
 			
 			
             <label for="DeliveryFNLName">First And Last Name</label>
@@ -106,12 +150,13 @@ Toppings
             <label for="DeliveryPhone">Phone</label>
             <input type="number" id="DeliveryPhone" name="DeliveryingPhone" required />
           </fieldset>
+</td>
+<td>
 
 
 
 
-
-<fieldset id="BillingInfo" class="text">
+<fieldset id="BillingInfo" class="text;float: right" >
             <legend>Billing Address</legend>
 			 <label for="BillSameDel">Same as delivery address:</label>
 			 <input type="checkbox" name="BillSameDelivery" id="BillSameDel"/>
@@ -180,9 +225,15 @@ Toppings
             <label for="BillPhone">Phone</label>
             <input type="number" id="BillPhone" name="BillingPhone" required />
           </fieldset>
+</td>
+</tr>
+</table>
+<input type="button" value="Submit Order" onclick="SubmitOrder()" >
 
 </form>
 
+
+
 <script src="Order.js"></script>
 
-
+</body>

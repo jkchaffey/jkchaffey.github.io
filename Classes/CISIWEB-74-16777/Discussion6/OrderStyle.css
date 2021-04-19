@@ -1,27 +1,12 @@
 fieldset {
-   position: relative;
-   padding: 5px 30px 70px 30px;
-   background: white;
-   border-radius: 5px;
-   margin-left: 15px;
-   margin-right: 15px;
-   margin-bottom: 25px;
+   background-color: #DB7093;
+   position: center;
+   padding: 12px 12px 12px 12px;
+   margin-left: 10px;
+   margin-right: 10px;
+   margin-bottom: 20px;
+  
 }
-
-fieldset:last-of-type {
-   margin-bottom: 0;
-}
-
-input, label, select, textarea, fieldset p, div.errorMessage, #ccNumErrorMessage, #cvvErrorMessage {
-   position: relative;
-   top: 50px;
-   line-height: 1.2em;
-}
-
-
-
-
-
 
 label, input {
    display: block;
@@ -29,4 +14,16 @@ label, input {
 
 
 
+form {
+	position: center;
+	margin-left: 14px;
+	width: 550px;
+    margin: 0 auto;
+	padding-top: 15px;
+    padding-bottom: 15px;
+}
 
+ .chkbox {
+   padding-left: 10px;
+   font-weight: bold;
+ }
